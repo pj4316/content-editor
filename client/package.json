@@ -1,0 +1,29 @@
+{
+  "name": "nextjs-tutorial",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.3",
+    "@mui/material": "^5.14.5",
+    "@types/node": "20.4.8",
+    "@types/react": "18.2.18",
+    "@types/react-dom": "18.2.7",
+    "@types/wavesurfer.js": "^6.0.6",
+    "audiobuffer-to-blob": "^1.0.2",
+    "eslint": "8.46.0",
+    "eslint-config-next": "13.4.13",
+    "next": "13.4.13",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "5.1.6",
+    "wavesurfer.js": "^7.3.2"
+  }
+}
