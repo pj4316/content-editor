@@ -1,14 +1,4 @@
-[nextJS](https://nextjs.org/)를 활용한 샘플앱 제작
-
-# 요구 사항
-
-- nodeJS
-
----
-
-# Step 
-
-## Step 1 - 설치와 실행
+# Installation And Getting Started 
 
 nextJS는 PageRouter / AppRouter 두가지 방식으로 개발을 할 수 있는데, 여기서는 AppRouter를 활용해본다
 
@@ -21,10 +11,6 @@ pageRouter는 /pages 하단의 디렉터리 구조를 라우터로 활용
 
 - run
 `npm run start`
-
-# Documents
-[routing_fundamentals](./docs/routing/00_doc_routing_fundamentals.md)
-
 
 # Test
 
