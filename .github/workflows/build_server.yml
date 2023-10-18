@@ -16,10 +16,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-      - name: change directory
-        run: cd ./server 
       - name: build
         run: |
+          cd ./server 
           npm install
           npm run build --if-present
       - name: upload artifacts
