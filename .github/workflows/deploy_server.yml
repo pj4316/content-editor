@@ -8,11 +8,11 @@ on:
         default: 'develop'
         required: true
         type: string
-      artifact:
-        description: 'artifact'
-        type: choice
-        options:
-          ref: curl https://api.github.com/repos/pj4316/content-editor/actions/artifacts
+      # artifact:
+      #   description: 'artifact'
+      #   type: choice
+      #   options:
+      #     ref: curl https://api.github.com/repos/pj4316/content-editor/actions/artifacts
 
 jobs:
   deploy:
@@ -24,4 +24,3 @@ jobs:
       - name: print
         run: |
           echo "${{inputs.environment}}"
-          echo "${{inputs.artifact}}"
