@@ -26,5 +26,4 @@ jobs:
         with:
           name: server-artifact
           path: |
-            dist
-            !dist/**/*.md
+            server/dist
