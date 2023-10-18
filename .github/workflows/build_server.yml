@@ -11,8 +11,10 @@ jobs:
       contents: read
       packages: write
     steps:
+      - name: Get current date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
       - uses: actions/checkout@v4
-      # Setup .npmrc file to publish to GitHub Packages
       - uses: actions/setup-node@v3
         with:
           node-version: 18
@@ -24,6 +26,6 @@ jobs:
       - name: upload artifacts
         uses: actions/upload-artifact@v3
         with:
-          name: server-artifact
+          name: "server_${{github.ref_name}}_${{ steps.date.outputs.date }}"
           path: |
             server/dist
