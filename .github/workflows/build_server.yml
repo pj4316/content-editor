@@ -29,4 +29,4 @@ jobs:
           name: "server_${{github.ref_name}}_${{ steps.date.outputs.date }}"
           path: |
             server/dist
-            server/node_modules
+            server/package*.json
