@@ -10,7 +10,7 @@ jobs:
       packages: write
     steps:
       - name: change directory
-        run: cd server 
+        run: cd ./server 
       - uses: actions/checkout@v4
       # Setup .npmrc file to publish to GitHub Packages
       - uses: actions/setup-node@v3
