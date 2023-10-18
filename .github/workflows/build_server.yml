@@ -18,10 +18,18 @@ jobs:
           node-version: '18.x'
           registry-url: 'https://npm.pkg.github.com'
           # Defaults to the user or organization that owns the workflow file
-          scope: '@octocat'
+          cache: 'npm'
+          cache-dependency-path: server/package-lock.json
       - name: change directory
         run: cd ./server 
-      - run: npm ci
-      - run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: build
+        run: |
+          npm install
+          npm run build --if-present
+      - name: upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: server-artifact
+          path: |
+            dist
+            !dist/**/*.md
