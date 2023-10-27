@@ -1,0 +1,26 @@
+name: deploy server
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'environment'
+        default: 'develop'
+        required: true
+        type: string
+      # artifact:
+      #   description: 'artifact'
+      #   type: choice
+      #   options:
+      #     ref: curl https://api.github.com/repos/pj4316/content-editor/actions/artifacts
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: print
+        run: |
+          echo "${{inputs.environment}}"

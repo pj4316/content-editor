@@ -11,6 +11,8 @@ export class UserController {
   async getUsers(): Promise<UserDto[]> {
     const users = await this.userService.getUsers();
 
+
+    console.log("test")
     return users.map(user => new UserDto(user))
   }
 
